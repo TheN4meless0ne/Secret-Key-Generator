@@ -1,8 +1,5 @@
+from key_gen import generate_secret_key
 import os
-import secrets
-
-def generate_secret_key(length=50):
-    return secrets.token_urlsafe(length)
 
 def save_to_env_file(secret_key, file_path='.env'):
     with open(file_path, 'w') as file:
